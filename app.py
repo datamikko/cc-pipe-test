@@ -1,10 +1,11 @@
 from flask import Flask
+import sys
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World AGAIN! 3.0</p>"
+    return f'<p>Hello, World!</p><p>Python version: {sys.version_info[0]}.{sys.version_info[1]}</p>'
 
 
 if __name__ == "__main__":
